@@ -22,6 +22,11 @@ class LabelledPoint {
     }
     case _ => throw new ClassCastException
   }
+
+  override def hashCode(): Int = {
+    val state = Seq(label, x, y)
+    state.map(_.hashCode()).foldLeft(0)((a, b) => 31 * a + b)
+  }
 }
 
 object LabelledPoint {

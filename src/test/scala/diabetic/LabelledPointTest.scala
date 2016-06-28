@@ -42,13 +42,13 @@ class LabelledPointTest extends FlatSpec with ShouldMatchers with PropertyChecks
     }
   }
 
-//  it should "implement extensional hash code" in {
-//    forAll { (value: LabelledPoint) =>
-//      val pointWithSameData = new LabelledPoint(value.label, value.x, value.y)
-//      value.hashCode() shouldBe pointWithSameData.hashCode()
-//    }
-//  }
-//
+  it should "implement extensional hash code" in {
+    forAll { (value: LabelledPoint) =>
+      val pointWithSameData = new LabelledPoint(value.label, value.x, value.y)
+      value.hashCode() shouldBe pointWithSameData.hashCode()
+    }
+  }
+
 //  it should "be serializable" in {
 //    LabelledPoint("label", 1, 2) shouldBe a [Serializable]
 //  }
