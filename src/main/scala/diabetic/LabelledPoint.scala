@@ -1,6 +1,6 @@
 package diabetic
 
-class LabelledPoint {
+class LabelledPoint extends Serializable {
   var label: String = ""
   var x: Int = 0
   var y: Int = 0

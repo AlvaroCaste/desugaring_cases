@@ -49,10 +49,10 @@ class LabelledPointTest extends FlatSpec with ShouldMatchers with PropertyChecks
     }
   }
 
-//  it should "be serializable" in {
-//    LabelledPoint("label", 1, 2) shouldBe a [Serializable]
-//  }
-//
+  it should "be serializable" in {
+    LabelledPoint("label", 1, 2) shouldBe a [Serializable]
+  }
+
 //  it should "be a product type" in {
 //    val value = LabelledPoint("name", 5, 7)
 //
