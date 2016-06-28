@@ -11,6 +11,8 @@ class LabelledPoint {
     this.x = x
     this.y = y
   }
+
+  override def toString: String = s"LabelledPoint($label,$x,$y)"
 }
 
 object LabelledPoint {

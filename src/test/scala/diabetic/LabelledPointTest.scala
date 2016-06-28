@@ -29,10 +29,10 @@ class LabelledPointTest extends FlatSpec with ShouldMatchers with PropertyChecks
     value.y shouldBe 2
   }
 
-//  it should "have a nice to string method" in {
-//    LabelledPoint("label", 1, 2).toString shouldBe "LabelledPoint(label,1,2)"
-//  }
-//
+  it should "have a nice to string method" in {
+    LabelledPoint("label", 1, 2).toString shouldBe "LabelledPoint(label,1,2)"
+  }
+
 //  it should "implement extensional equality" in {
 //    forAll { (label: String, x: Int, y: Int) =>
 //      LabelledPoint(label, x, y) shouldBe LabelledPoint(label, x, y)
