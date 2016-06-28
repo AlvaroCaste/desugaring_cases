@@ -33,15 +33,15 @@ class LabelledPointTest extends FlatSpec with ShouldMatchers with PropertyChecks
     LabelledPoint("label", 1, 2).toString shouldBe "LabelledPoint(label,1,2)"
   }
 
-//  it should "implement extensional equality" in {
-//    forAll { (label: String, x: Int, y: Int) =>
-//      LabelledPoint(label, x, y) shouldBe LabelledPoint(label, x, y)
-//      LabelledPoint(label, x, y) should not be LabelledPoint(label + "!", x, y)
-//      LabelledPoint(label, x, y) should not be LabelledPoint(label, x + 1, y)
-//      LabelledPoint(label, x, y) should not be LabelledPoint(label, x, y - 2)
-//    }
-//  }
-//
+  it should "implement extensional equality" in {
+    forAll { (label: String, x: Int, y: Int) =>
+      LabelledPoint(label, x, y) shouldBe LabelledPoint(label, x, y)
+      LabelledPoint(label, x, y) should not be LabelledPoint(label + "!", x, y)
+      LabelledPoint(label, x, y) should not be LabelledPoint(label, x + 1, y)
+      LabelledPoint(label, x, y) should not be LabelledPoint(label, x, y - 2)
+    }
+  }
+
 //  it should "implement extensional hash code" in {
 //    forAll { (value: LabelledPoint) =>
 //      val pointWithSameData = new LabelledPoint(value.label, value.x, value.y)
