@@ -21,14 +21,14 @@ class LabelledPointTest extends FlatSpec with ShouldMatchers with PropertyChecks
     value.y shouldBe 2
   }
 
-//  it should "offer a factory method" in {
-//    val value = LabelledPoint("label", 1, 2)
-//
-//    value.label shouldBe "label"
-//    value.x shouldBe 1
-//    value.y shouldBe 2
-//  }
-//
+  it should "offer a factory method" in {
+    val value = LabelledPoint("label", 1, 2)
+
+    value.label shouldBe "label"
+    value.x shouldBe 1
+    value.y shouldBe 2
+  }
+
 //  it should "have a nice to string method" in {
 //    LabelledPoint("label", 1, 2).toString shouldBe "LabelledPoint(label,1,2)"
 //  }

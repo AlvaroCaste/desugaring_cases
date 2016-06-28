@@ -12,3 +12,7 @@ class LabelledPoint {
     this.y = y
   }
 }
+
+object LabelledPoint {
+  def apply(label: String, x: Int, y: Int) = new LabelledPoint(label, x, y)
+}
