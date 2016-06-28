@@ -13,14 +13,14 @@ class LabelledPointTest extends FlatSpec with ShouldMatchers with PropertyChecks
   } yield new LabelledPoint(label, x, y))
 
 
-//  "A 'case' class like LabelledPoint" should "have getters" in {
-//    val value = new LabelledPoint("label", 1, 2)
-//
-//    value.label shouldBe "label"
-//    value.x shouldBe 1
-//    value.y shouldBe 2
-//  }
-//
+  "A 'case' class like LabelledPoint" should "have getters" in {
+    val value = new LabelledPoint("label", 1, 2)
+
+    value.label shouldBe "label"
+    value.x shouldBe 1
+    value.y shouldBe 2
+  }
+
 //  it should "offer a factory method" in {
 //    val value = LabelledPoint("label", 1, 2)
 //
