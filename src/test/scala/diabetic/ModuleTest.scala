@@ -8,10 +8,10 @@ class ModuleTest extends FlatSpec with ShouldMatchers {
     Module.toString shouldBe "Module"
   }
 
-//  it should "be serializable" in {
-//    Module shouldBe a [Serializable]
-//  }
-//
+  it should "be serializable" in {
+    Module shouldBe a [Serializable]
+  }
+
 //  it should "be a product" in {
 //    Module.productPrefix shouldBe "Module"
 //    Module.productArity shouldBe 0
