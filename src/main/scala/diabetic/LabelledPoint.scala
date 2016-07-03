@@ -1,6 +1,6 @@
 package diabetic
 
-class LabelledPoint extends Serializable {
+class LabelledPoint extends Serializable with Product {
   var label: String = ""
   var x: Int = 0
   var y: Int = 0
@@ -26,6 +26,22 @@ class LabelledPoint extends Serializable {
   override def hashCode(): Int = {
     val state = Seq(label, x, y)
     state.map(_.hashCode()).foldLeft(0)((a, b) => 31 * a + b)
+  }
+
+  override def productElement(n: Int): Any = n match {
+    case 0 => label
+    case 1 => x
+    case 2 => y
+    case _ => throw new IndexOutOfBoundsException(n.toString)
+  }
+
+  override def productArity: Int = this.getClass.getDeclaredFields.length
+
+  override def productPrefix: String = this.getClass.getSimpleName
+
+  override def canEqual(that: Any): Boolean = that match {
+    case x: LabelledPoint => true
+    case _ => false
   }
 }
 

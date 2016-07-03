@@ -53,17 +53,17 @@ class LabelledPointTest extends FlatSpec with ShouldMatchers with PropertyChecks
     LabelledPoint("label", 1, 2) shouldBe a [Serializable]
   }
 
-//  it should "be a product type" in {
-//    val value = LabelledPoint("name", 5, 7)
-//
-//    value.productPrefix shouldBe "LabelledPoint"
-//    value.productArity shouldBe 3
-//    value.productElement(0) shouldBe "name"
-//    value.productElement(1) shouldBe 5
-//    value.productElement(2) shouldBe 7
-//    value.productIterator.toList shouldBe List("name", 5, 7)
-//  }
-//
+  it should "be a product type" in {
+    val value = LabelledPoint("name", 5, 7)
+
+    value.productPrefix shouldBe "LabelledPoint"
+    value.productArity shouldBe 3
+    value.productElement(0) shouldBe "name"
+    value.productElement(1) shouldBe 5
+    value.productElement(2) shouldBe 7
+    value.productIterator.toList shouldBe List("name", 5, 7)
+  }
+
 //  it should "have a copy method" in {
 //    val value = LabelledPoint("name", 5, 7)
 //    value.copy(label = "other") shouldBe LabelledPoint("other", 5, 7)
