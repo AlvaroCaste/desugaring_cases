@@ -50,4 +50,8 @@ class LabelledPoint extends Serializable with Product {
 
 object LabelledPoint {
   def apply(label: String, x: Int, y: Int) = new LabelledPoint(label, x, y)
+
+  def unapply(point: LabelledPoint): Option[(String, Int, Int)] = {
+    Some(point.label, point.x, point.y)
+  }
 }

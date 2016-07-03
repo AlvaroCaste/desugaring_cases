@@ -70,12 +70,12 @@ class LabelledPointTest extends FlatSpec with ShouldMatchers with PropertyChecks
     value.copy(x = 1, y = 2) shouldBe LabelledPoint("name", 1, 2)
   }
 
-//  it should "have an extractor" in {
-//    LabelledPoint.unapply(LabelledPoint("name", 5, 7)) shouldBe Some("name", 5, 7)
-//
-//    val values = Seq.tabulate(10) { index => LabelledPoint(s"point$index", index % 2, index) }
-//    values.collect {
-//      case LabelledPoint(name, 0, index) if index < 5 => name
-//    } shouldBe Seq("point0", "point2", "point4")
-//  }
+  it should "have an extractor" in {
+    LabelledPoint.unapply(LabelledPoint("name", 5, 7)) shouldBe Some("name", 5, 7)
+
+    val values = Seq.tabulate(10) { index => LabelledPoint(s"point$index", index % 2, index) }
+    values.collect {
+      case LabelledPoint(name, 0, index) if index < 5 => name
+    } shouldBe Seq("point0", "point2", "point4")
+  }
 }
