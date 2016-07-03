@@ -1,3 +1,5 @@
 package diabetic
 
-object Module
+object Module {
+  override def toString = "Module"
+}
