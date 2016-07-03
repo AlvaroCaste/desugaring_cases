@@ -64,12 +64,12 @@ class LabelledPointTest extends FlatSpec with ShouldMatchers with PropertyChecks
     value.productIterator.toList shouldBe List("name", 5, 7)
   }
 
-//  it should "have a copy method" in {
-//    val value = LabelledPoint("name", 5, 7)
-//    value.copy(label = "other") shouldBe LabelledPoint("other", 5, 7)
-//    value.copy(x = 1, y = 2) shouldBe LabelledPoint("name", 1, 2)
-//  }
-//
+  it should "have a copy method" in {
+    val value = LabelledPoint("name", 5, 7)
+    value.copy(label = "other") shouldBe LabelledPoint("other", 5, 7)
+    value.copy(x = 1, y = 2) shouldBe LabelledPoint("name", 1, 2)
+  }
+
 //  it should "have an extractor" in {
 //    LabelledPoint.unapply(LabelledPoint("name", 5, 7)) shouldBe Some("name", 5, 7)
 //

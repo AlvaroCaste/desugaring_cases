@@ -2,9 +2,9 @@ package diabetic
 
 class LabelledPoint extends Serializable with Product {
   var label: String = ""
+
   var x: Int = 0
   var y: Int = 0
-
   def this(label: String, x: Int, y: Int) {
     this()
     this.label = label
@@ -43,6 +43,9 @@ class LabelledPoint extends Serializable with Product {
     case x: LabelledPoint => true
     case _ => false
   }
+
+  def copy(label: String = label, x: Int = x, y: Int = y) = new LabelledPoint(label, x, y)
+
 }
 
 object LabelledPoint {
